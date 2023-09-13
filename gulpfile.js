@@ -10,7 +10,7 @@ gulp.task('sass', function () {
     return gulp.src('./sass/styles.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({basename: 'styles.min'}))
-        .pipe(gulp.dest('./src/css'));
+        .pipe(gulp.dest('./css'));
 });
 
 // watch changes in scss files and run sass task
@@ -23,7 +23,7 @@ gulp.task('minify-js', function () {
     return gulp.src('./js/scripts.js')
         .pipe(uglify())
         .pipe(rename({basename: 'scripts.min'}))
-        .pipe(gulp.dest('./src/js'));
+        .pipe(gulp.dest('./js'));
 });
 
 // copy index and images to src
@@ -42,6 +42,10 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('./src'));
     gulp.src('./manifest.json')
         .pipe(gulp.dest('./src'));
+    gulp.src('./js/*')
+        .pipe(gulp.dest('./src/js'));
+    gulp.src('./css/*')
+        .pipe(gulp.dest('./src/css'));
 });
 
 // default task
