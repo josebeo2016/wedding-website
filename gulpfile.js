@@ -34,9 +34,11 @@ gulp.task('copy', function (done) {
         .pipe(gulp.dest('./src/img'));
     gulp.src('./fonts/*')
         .pipe(gulp.dest('./src/fonts'));
-    gulp.src('./vendor/*')
-        .pipe(gulp.dest('./src/vendor'));
+    gulp.src('./js/vendor/*')
+        .pipe(gulp.dest('./src/js/vendor'));
     gulp.src('./browserconfig.xml')
+        .pipe(gulp.dest('./src'));
+    gulp.src('./favicon.ico')
         .pipe(gulp.dest('./src'));
     gulp.src('./*.png')
         .pipe(gulp.dest('./src'));
