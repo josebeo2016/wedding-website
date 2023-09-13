@@ -27,7 +27,7 @@ gulp.task('minify-js', function () {
 });
 
 // copy index and images to src
-gulp.task('copy', function () {
+gulp.task('copy', function (done) {
     gulp.src('./index.html')
         .pipe(gulp.dest('./src'));
     gulp.src('./img/*')
@@ -46,6 +46,7 @@ gulp.task('copy', function () {
         .pipe(gulp.dest('./src/js'));
     gulp.src('./css/*')
         .pipe(gulp.dest('./src/css'));
+    done();
 });
 
 // default task
