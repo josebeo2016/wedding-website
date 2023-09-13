@@ -10,7 +10,7 @@ gulp.task('sass', function () {
     return gulp.src('./sass/styles.scss')
         .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(rename({basename: 'styles.min'}))
-        .pipe(gulp.dest('./css'));
+        .pipe(gulp.dest('./src/css'));
 });
 
 // watch changes in scss files and run sass task
@@ -23,8 +23,26 @@ gulp.task('minify-js', function () {
     return gulp.src('./js/scripts.js')
         .pipe(uglify())
         .pipe(rename({basename: 'scripts.min'}))
-        .pipe(gulp.dest('./js'));
+        .pipe(gulp.dest('./src/js'));
+});
+
+// copy index and images to src
+gulp.task('copy', function () {
+    gulp.src('./index.html')
+        .pipe(gulp.dest('./src'));
+    gulp.src('./img/*')
+        .pipe(gulp.dest('./src/img'));
+    gulp.src('./fonts/*')
+        .pipe(gulp.dest('./src/fonts'));
+    gulp.src('./vendor/*')
+        .pipe(gulp.dest('./src/vendor'));
+    gulp.src('./browserconfig.xml')
+        .pipe(gulp.dest('./src'));
+    gulp.src('./*.png')
+        .pipe(gulp.dest('./src'));
+    gulp.src('./manifest.json')
+        .pipe(gulp.dest('./src'));
 });
 
 // default task
-gulp.task('default', gulp.series('sass', 'minify-js'));
+gulp.task('default', gulp.series('sass', 'minify-js', 'copy'));
