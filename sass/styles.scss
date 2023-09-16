@@ -10,6 +10,24 @@
 @import "partials/layout";
 
 /* ==========================================================================
+Coronet font
+========================================================================== */
+@font-face {
+  font-family: 'Coronet';
+  src: url('../fonts/vni.common.VCORONET.ttf') format('truetype');
+  /* additional font properties */
+}
+.hintro{
+  font-family: 'Coronet';
+  font-style: bold;
+  font-size: 40px;
+  color: accent-color;
+  text-align: center;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/* ==========================================================================
 Global Styles
 ========================================================================== */
 .group:after {
