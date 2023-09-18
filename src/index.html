@@ -34,7 +34,7 @@
             if (css === 'animate.css') {
                 link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
             } else if (css === 'font-awesome.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
+                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css';
             }
             link.rel = 'stylesheet';
 
@@ -523,7 +523,10 @@
         </div>
     </div>
 </section>
+<section class="text-center" id="gift">
 
+    
+</section>
 <section class="rsvp text-center" id="rsvp">
 
     <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
@@ -559,6 +562,41 @@
                     </button>
                 </form>
             </div>
+        </div>
+    </div>
+
+    <div id="vnbank-modal" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
+                    </button>
+                    <div class="section-padding">
+                        <h3>Scan me!</h3>
+                        <img src="img/qr_tech.png" style="width: 100%; max-width: 200px;">
+                        <p>We are glad to see you join us on our big day.</p>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+                <h3>Gửi quà cưới</h3>
+                <div class="col-md-6" style="padding: 5px;">
+                    <a href="https://paypal.me/phucmiwedding?country.x=VN&locale.x=vi_VN" class="btn btn-accent btn-small" target="_blank">
+                        <i class="fa-brands fa-paypal"></i>&nbsp;&nbsp;Paypal
+                    </a>
+                </div>
+                <div class="col-md-6" style="padding: 5px;">
+                    <a type="button" class="btn btn-accent btn-small" data-toggle="modal" data-target="#vnbank-modal">
+                        <i class="fa-solid fa-qrcode"></i>&nbsp;&nbsp;Lấy mã QR
+                    </a>
+                </div>
+            </div>
+                       
         </div>
     </div>
 </section>
