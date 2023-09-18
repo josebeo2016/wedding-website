@@ -288,7 +288,7 @@ Album slideshow
 .swiper-slide img {
   display: block;
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: cover;
 }
 
@@ -297,7 +297,7 @@ Hero
 ========================================================================== */
 .hero {
   min-height: 1000px;
-  background: url('../img/KAI01937.jpeg') center center;
+  background: url('../img/KAI01937.jpg') center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
