@@ -58,14 +58,20 @@
     <link rel="stylesheet" href="css/flexslider.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
     <!-- <link rel='stylesheet' href='css/swiper.min.css'> -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     
+
 </head>
 <body id="top">
+<!-- SCM Music Player https://www.scmplayer.net-->
+
+<!--SCM Music Player script end -->
+
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade
     your browser</a> to improve your experience.</p>
@@ -75,6 +81,13 @@
     <source src="img/invitation.mp4" type="video/mp4">
     Your browser does not support the video tag.
 </video> -->
+<section>
+    <!-- SCM Music Player https://www.scmplayer.net -->
+<script type="text/javascript" src="https://www.scmplayer.net/script.js" 
+data-config="{'skin':'skins/simpleBlue/skin.css','volume':50,'autoplay':true,'shuffle':true,'repeat':1,'placement':'bottom','showplaylist':false,'playlist':[{'title':'Test','url':'https://www.youtube.com/watch?v=IOe0tNoUGv8'}]}" ></script>
+<!-- SCM Music Player script end -->
+
+</section>
 <section class="hero">
     <section class="navigation">
         <header>
@@ -597,7 +610,7 @@
     </div>
 </footer>
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
-<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
 <script src="js/jquery.flexslider-min.js"></script>
