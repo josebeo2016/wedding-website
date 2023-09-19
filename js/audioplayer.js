@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
       audio.load(); // Load the audio
   
       audio.addEventListener("ended", playNextSong); // Event listener for when the current song ends
-      audio.muted = true;
       audio.play(); // Start playing the audio
-      audio.muted = false;
       isPlaying = true;
     }
   

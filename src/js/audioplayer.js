@@ -31,7 +31,6 @@ document.addEventListener("DOMContentLoaded", function() {
       audio.load(); // Load the audio
   
       audio.addEventListener("ended", playNextSong); // Event listener for when the current song ends
-  
       audio.play(); // Start playing the audio
       isPlaying = true;
     }
@@ -49,8 +48,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     playStopBtn.addEventListener("click", togglePlay);
-    // asynchronize the play/pause button with the audio state
-
+    
     // togglePlay();
   });
   
