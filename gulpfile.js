@@ -50,6 +50,8 @@ gulp.task('copy', function (done) {
         .pipe(gulp.dest('./src/js'));
     gulp.src('./css/*')
         .pipe(gulp.dest('./src/css'));
+    gulp.src('./musics/*')
+        .pipe(gulp.dest('./src/musics'));
     done();
 });
 
