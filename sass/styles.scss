@@ -1019,14 +1019,18 @@ Audio player
   // background-color: acent-color;
   padding: 20px;
   .play-stop {
-    display: inline-block;
+    display: inline-flex; /* Use flexbox to center the text */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
     width: 35px; /* Set a fixed width to create a circle */
     height: 35px; /* Set a fixed height to create a circle */
     border-radius: 50%; /* Make the button circular */
     border: none; /* Remove the border */
-    // background-color: $accent-color;
+    /* background-color: $accent-color; */
     color: $accent-color;
     cursor: pointer;
+    /* text center */
+    text-align: center;
   }
 }
 
@@ -1049,8 +1053,15 @@ blur modal
 }
 
 .blur-modal-content {
-  background-color: $accent-color;
+  position: relative;
+  width: 90%;
+  max-width: 750px;
+  margin: 0 auto;
   padding: 20px;
   text-align: center;
-  pointer-events: auto;
+}
+
+.scaled-image {
+  max-width: 100%;
+  height: auto;
 }
