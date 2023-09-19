@@ -49,6 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
   
     playStopBtn.addEventListener("click", togglePlay);
     
-    // togglePlay();
+    togglePlay();
   });
   

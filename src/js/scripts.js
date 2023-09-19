@@ -219,7 +219,7 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
-
+        
         $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
         $.post('https://script.google.com/macros/s/AKfycbzKuiPlZg5XuamezP_PzavWiALs-iv669sd7_WW3Gbpc6AlJ2fNBKTrEXZwzt_d144O/exec', data)
             .done(function (data) {
@@ -227,6 +227,7 @@ $(document).ready(function () {
                 if (data.result === "error") {
                     $('#alert-wrapper').html(alert_markup('danger', data.message));
                 } else {
+                    $('textarea[name="message"]').val('');
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
                 }

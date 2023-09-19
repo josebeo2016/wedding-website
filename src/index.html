@@ -497,7 +497,7 @@ SCM Music Player script end -->
     </div>
     <!-- <div id="map-canvas"></div> -->
     
-    <div id="map-canvas-th" hidden><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d598.6779381933175!2d106.36366377010148!3d11.279278969746954!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x310b49e0ca82c26f%3A0xb795904891a09b87!2zTmjDoCBIw6BuZyBUaeG7h2MgQ8aw4bubaSBBIEPDtG5nIFR5IENhbyBTdSBE4bqndSBUaeG6v25n!5e0!3m2!1sen!2skr!4v1694692482519!5m2!1sen!2skr" width="100%" height="500" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+    <div id="map-canvas-th" hidden><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3917.3057160532567!2d107.076397!3d10.9402634!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174e36067cd4317%3A0x241315db4bdc1eba!2zTmjDoCB0aOG7nSBHacOhbyB44bupIFRoYW5oIELDrG5o!5e0!3m2!1svi!2skr!4v1695138007508!5m2!1svi!2skr" width="100%" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     <div id="map-canvas-vq"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4712.116815692931!2d107.07339840610793!3d10.938684643432364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174e36067cd4317%3A0x241315db4bdc1eba!2sThanh%20Binh%20Parish%20Church!5e0!3m2!1sen!2skr!4v1694450100074!5m2!1sen!2skr" width="100%" height="500" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe></div>
     <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d3912.733706514939!2d106.366027!3d11.280975!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1694449409153!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen=""  referrerpolicy="no-referrer-when-downgrade"></iframe> -->
     <div id="map-content-wrapper" class="container pointer-events-none">
@@ -533,10 +533,10 @@ SCM Music Player script end -->
                                     class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a>
                         </div> -->
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map-vq"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Vu Quy</a>
+                            <a class="btn btn-accent btn-small" id="btn-show-map-vq" href="https://maps.app.goo.gl/UAZTXdc7SegSKtPFA" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Vu Quy&nbsp;&nbsp;&nbsp;</a>
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
-                            <a class="btn btn-accent btn-small" id="btn-show-map-th"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Tân Hôn</a>
+                            <a class="btn btn-accent btn-small" id="btn-show-map-th" href="https://maps.app.goo.gl/xtaRyP8j2ypP23S47" target="_blank"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Tân Hôn</a>
                         </div>
                     </div>
                 </div>
@@ -558,7 +558,7 @@ SCM Music Player script end -->
                     </button>
                     <div class="section-padding">
                         <h3>Thank you!</h3>
-                        <p>We are glad to see you join us on our big day.</p>
+                        <p>Sự hiện diện của quý vị là niềm vinh hạnh cho gia đình chúng tôi!</p>
                         <div id="add-to-cal"></div>
                     </div>
                 </div>
@@ -570,7 +570,7 @@ SCM Music Player script end -->
         <div class="row">
             <div class="col-md-6 col-md-offset-3">
                 <h3>Gửi lời chúc hôn</h3>
-                <p>Mỗi lời chúc của bạn là hạnh phúc của chúng mình</p>
+                <p>Send us your best wishes</p>
                 <form id="rsvp-form" class="rsvp-form"
                       action=""
                       method="POST">
@@ -593,9 +593,9 @@ SCM Music Player script end -->
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
                     <div class="section-padding">
-                        <h3>Scan me!</h3>
+                        <h4>Vui lòng quét mã bằng ứng dụng ngân hàng</h4>
                         <img src="img/qr_tech.png" style="width: 100%; max-width: 200px;">
-                        <p>We are glad to see you join us on our big day.</p>
+                        <p>Sự hiện diện của quý vị là niềm vinh hạnh cho gia đình chúng tôi!</p>
                     </div>
                 </div>
             </div><!-- /.modal-content -->
@@ -643,7 +643,76 @@ SCM Music Player script end -->
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
-<script src="js/audioplayer.js"></script>
+
+<!-- Modal -->
+<div id="blur-modal" class="blur-modal">
+    <div class="blur-modal-content">
+        
+        <img src="img/logo-lg.png">
+        <p>Chạm để vào trang (Click to enter)</p>
+    </div>
+</div>
+<script>
+document.addEventListener('click', function() {
+    var blur_modal = document.getElementById('blur-modal');
+    blur_modal.style.display = 'none';
+    
+    var audio = new Audio(); // Create a new audio object
+    audio.volume = 0.9; // Set the volume to 90%
+
+    var playlist = ["musics/beautifulinwhite.mp3",
+    "musics/honcayeu.mp3",
+    "musics/ido.mp3",
+    "musics/ngaydautien.mp3",
+    "musics/onlylove.mp3",
+    "musics/perfect.mp3",
+    "musics/takemetoyourheart.mp3",
+    "musics/youarethereason.mp3"]; // Song file names in your playlist
+    var playStopBtn = document.getElementById("play-stop-btn");
+    var isPlaying = false;
+
+    function togglePlay() {
+      if (isPlaying) {
+        stopSong();
+        playStopBtn.innerHTML = '<i class="fa fa-play"></i>';
+      } else {
+        playSong();
+        playStopBtn.innerHTML = '<i class="fa fa-stop"></i>';
+      }
+    }
+  
+    function playSong() {
+      var randomIndex = Math.floor(Math.random() * playlist.length); // Get a random index from the playlist
+      var song = playlist[randomIndex]; // Get the random song from the playlist array
+  
+      audio.src = song; // Set the audio source to the selected song
+      audio.load(); // Load the audio
+  
+      audio.addEventListener("ended", playNextSong); // Event listener for when the current song ends
+      audio.play(); // Start playing the audio
+      isPlaying = true;
+    }
+  
+    function stopSong() {
+      audio.pause(); // Pause the audio
+      audio.currentTime = 0; // Reset the audio to the beginning
+      audio.removeEventListener("ended", playNextSong); // Remove the event listener
+      isPlaying = false;
+    }
+  
+    function playNextSong() {
+      stopSong();
+      playSong();
+    }
+  
+    playStopBtn.addEventListener("click", togglePlay);
+    
+    togglePlay();
+
+  }, {once: true});
+</script>
+
+<!-- <script src="js/audioplayer.js"></script> -->
 <!-- <script src="js/swiper.min.js"></script> -->
 <!-- <script src="js/TweenMax.min.js"></script>
 <script src="js/slideshow.js"></script> -->
