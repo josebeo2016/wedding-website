@@ -1007,3 +1007,25 @@ body.modal-open {
 .modal-body {
   padding:25px;
 }
+
+/* ==========================================================================
+Audio player
+========================================================================== */
+.music-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  // background-color: acent-color;
+  padding: 20px;
+  .play-stop {
+    display: inline-block;
+    width: 35px; /* Set a fixed width to create a circle */
+    height: 35px; /* Set a fixed height to create a circle */
+    border-radius: 50%; /* Make the button circular */
+    border: none; /* Remove the border */
+    // background-color: $accent-color;
+    color: $accent-color;
+    cursor: pointer;
+  }
+}

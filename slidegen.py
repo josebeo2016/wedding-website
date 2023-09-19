@@ -1,6 +1,6 @@
 import os
 
-images = [image for image in os.listdir('img/album')]
+images = [image for image in os.listdir('img/album') if image.endswith('small.jpg')]
 
 for image in images:
     code = f'''
