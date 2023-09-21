@@ -190,6 +190,36 @@ $(document).ready(function () {
         $('#noti-stk-wrapper').html(alert_markup('info', '<strong>Số tài khoảng đã được lưu vào clipboard!</strong>'));
 
     });
+    /********************** Countdown **********************/
+    // Set the date/time for the countdown
+    var countDownDate = new Date("2023-11-11T03:59:59").getTime();
+
+    // Update the countdown every second
+    var countdown = setInterval(function() {
+      // Get the current date/time
+      var now = new Date().getTime();
+
+      // Find the distance between now and the countdown date
+      var distance = countDownDate - now;
+
+      // Calculate days, hours, minutes, and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Display the countdown
+      $(".days").html(days);
+      $(".hours").html(hours);
+      $(".minutes").html(minutes);
+      $(".seconds").html(seconds);
+
+      // If the countdown is finished, display a message
+      if (distance < 0) {
+        clearInterval(countdown);
+        $("#countdown").html("Countdown has ended!");
+      }
+    }, 1000);
     /********************** Add to Calendar **********************/
     var myCalendar = createCalendar({
         options: {

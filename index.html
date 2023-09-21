@@ -133,17 +133,15 @@
                 <h4>November 11th & 12th 2023</h4>
 
             </div>
-
-            <div class="row">
-                <p id="countdown" class="countdown"></p>
-            </div>
+            
         </div>
+        
         <div class="row">
             <div class="col-md-12 text-center">
                 <h2 class="hintro">Thieân Phuùc & Hoaøng Mi</h2>
-
             </div>
         </div>
+
         <div class="row">
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/beo.png" class="wp1"></div>
             <div class="col-md-6">
@@ -154,34 +152,33 @@
                 Chân thành cảm ơn tình cảm của mọi người. Hẹn gặp mọi người ạ.
 
                 </p>
+                <div class="row">
+                    <!-- Countdown -->
+                    <div id="countdown">
+                        <div class="countdown-item">
+                            <span class="days"></span>
+                            <div class="smalltext">Ngày</div>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="hours"></span>
+                            <div class="smalltext">Giờ</div>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="minutes"></span>
+                            <div class="smalltext">Phút</div>
+                        </div>
+                        <div class="countdown-item">
+                            <span class="seconds"></span>
+                            <div class="smalltext">Giây</div>
+                        </div>
+                    </div>
+                    <!-- end Countdown -->
+                </div>
             </div>
             
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/meow.png" class="wp2"></div>
         </div>
         
-        <script>
-            var countDownDate = new Date("Nov 11, 2023 00:00:00").getTime();
-    
-            var countdownfunction = setInterval(function() {
-    
-                var now = new Date().getTime();
-    
-                var distance = countDownDate - now;
-    
-                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-    
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
-                + minutes + "m " + seconds + "s ";
-    
-                if (distance < 0) {
-                    clearInterval(countdownfunction);
-                    document.getElementById("countdown").innerHTML = "The day has arrived";
-                }
-            }, 1000);
-        </script>
         <div class="row">
             <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/beo.png" class="wp8"></div>
             <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/meow.png" class="wp9"></div>
