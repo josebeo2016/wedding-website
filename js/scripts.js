@@ -215,12 +215,21 @@ $(document).ready(function () {
     $('#add-to-cal').html(myCalendar);
 
 
-    /********************** RSVP **********************/
+    /********************** RSVP Form **********************/
+    $('#message').on('input', function() {
+        if($(this).val().trim() !== '') {
+            $('#submit-button').prop('disabled', false);
+        }
+        else {
+            $('#submit-button').prop('disabled', true);
+        }
+    });
+
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
         
-        $('#alert-wrapper').html(alert_markup('info', '<strong>Just a sec!</strong> We are saving your details.'));
+        $('#alert-wrapper').html(alert_markup('info', '<strong>Vui lòng đợi!</strong> Chúng tôi đang lưu lời chúc của bạn.'));
         $.post('https://script.google.com/macros/s/AKfycbzKuiPlZg5XuamezP_PzavWiALs-iv669sd7_WW3Gbpc6AlJ2fNBKTrEXZwzt_d144O/exec', data)
             .done(function (data) {
                 console.log(data);

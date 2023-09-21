@@ -434,9 +434,13 @@
                       method="POST">
                       
                     <div class="wrap-input100">
-                        <textarea name="message" class="input100" placeholder="Nhập lời chúc ..."></textarea>
+                        <textarea id="message" name="message" class="input100" placeholder="Nhập lời chúc ..."></textarea>
                     </div>
-                    <button class="btn-fill rsvp-btn">
+                    
+                    <div class="row">
+                        <div class="col-md-12" id="alert-wrapper"></div>
+                    </div>
+                    <button id="submit-button" class="btn-fill rsvp-btn" disabled>
                         Gửi
                     </button>
                 </form>

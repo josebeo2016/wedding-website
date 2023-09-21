@@ -904,6 +904,10 @@ RSVP form
       width: 100%;
       font-size: 13px;
     }
+    .rsvp-btn:disabled {
+      background-color: #a9a9a9; /* Dark gray */
+      cursor: not-allowed;
+    }
     .form-input-group {
       width: 100%;
       height: 55px;
