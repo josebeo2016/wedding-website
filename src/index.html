@@ -133,6 +133,10 @@
                 <h4>November 11th & 12th 2023</h4>
 
             </div>
+
+            <div class="row">
+                <p id="countdown" class="countdown"></p>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12 text-center">
@@ -149,12 +153,35 @@
                 Xin trân trọng mời mọi người đến dự lễ cưới của chúng mình. 
                 Chân thành cảm ơn tình cảm của mọi người. Hẹn gặp mọi người ạ.
 
-            </p>
-
+                </p>
             </div>
+            
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/meow.png" class="wp2"></div>
         </div>
-
+        
+        <script>
+            var countDownDate = new Date("Nov 11, 2023 00:00:00").getTime();
+    
+            var countdownfunction = setInterval(function() {
+    
+                var now = new Date().getTime();
+    
+                var distance = countDownDate - now;
+    
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+                document.getElementById("countdown").innerHTML = days + "d " + hours + "h "
+                + minutes + "m " + seconds + "s ";
+    
+                if (distance < 0) {
+                    clearInterval(countdownfunction);
+                    document.getElementById("countdown").innerHTML = "The day has arrived";
+                }
+            }, 1000);
+        </script>
         <div class="row">
             <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/beo.png" class="wp8"></div>
             <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/meow.png" class="wp9"></div>
@@ -498,6 +525,7 @@
     </div>
 </footer>
 <script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
+<!-- <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
 <script src="js/jquery.fancybox.pack.js"></script>
 <script src="js/vendor/bootstrap.min.js"></script>
@@ -505,6 +533,8 @@
 <script src="js/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
+<script src="js/jquery.plugin.js"></script>
+<script src="js/jquery.countdown.js"></script>
 
 <div id="blur-modal" class="blur-modal">
     <div class="blur-modal-content">

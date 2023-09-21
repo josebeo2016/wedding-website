@@ -425,6 +425,89 @@ Social share buttons
 }
 
 /* ==========================================================================
+Countdown
+========================================================================== */
+#countdown {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.countdown.section {
+	background-repeat: no-repeat;
+}
+.countdown .heading {
+	margin-bottom: 2em;
+}
+.countdown .heading h2 {
+	font-size: 33px;
+}
+@media only screen and (min-width: 768px) {
+	.countdown .heading h2 {
+		font-size: 50px;
+	}
+}
+.countdown .heading h2, .countdown .heading p {
+	color: #FFFFFF;
+}
+/*.timer{justify-content: center;}*/
+@media only screen and (min-width: 768px) {
+	.timer {
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-align: center;
+		align-items: center;
+		-ms-flex-pack: justify;
+		justify-content: center;
+	}
+}
+.timer .timer-item_digits {
+	display: -ms-flexbox;
+	display: flex;
+	-ms-flex-pack: center;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.timer .timer-item_text {
+	color: #FFFFFF;
+	font-family: 'Playball', cursive;
+	font-size: 34px;
+}
+.timer .timer-item {
+	/* coutndown blocks */
+	position: relative;
+}
+.timer .timer-item > div {
+	/* countdown block inner div */
+	display: table-cell;
+	vertical-align: middle;
+	height: 100px;
+	width: 100px;
+}
+.timer .timer-item .smalltext,
+.timer .timer-item .digit {
+	display: block;
+	color: #FFFFFF;
+}
+.timer .timer-item .digit {
+	font-size: 47px;
+	line-height: 40px;
+}
+.timer .timer-item .smalltext {
+	color: rgba(255, 255, 255, 0.7);
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+@media only screen and (max-width: 450px) {
+	.timer .timer-item > div {height: 85px;width: 85px;}
+	.timer .timer-item_text {
+		font-size: 30px;
+	}
+}
+
+/* ==========================================================================
 Intro
 ========================================================================== */
 .intro span.icon {
