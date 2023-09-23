@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     "musics/onlylove.mp3",
     "musics/perfect.mp3",
     "musics/takemetoyourheart.mp3",
+    "musics/marryyou.wav",
     "musics/youarethereason.mp3"]; // Song file names in your playlist
     var playStopBtn = document.getElementById("play-stop-btn");
     var isPlaying = false;
