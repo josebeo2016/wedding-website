@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", function() {
     var audio = new Audio(); // Create a new audio object
     audio.volume = 0.9; // Set the volume to 90%
 
-    var playlist = ["musics/beautifulinwhite.mp3",
+    var playlist = [
+    "musics/beautifulinwhite.mp3",
     "musics/honcayeu.mp3",
     "musics/ido.mp3",
     "musics/ngaydautien.mp3",
@@ -11,6 +12,16 @@ document.addEventListener("DOMContentLoaded", function() {
     "musics/takemetoyourheart.mp3",
     "musics/marryyou.wav",
     "musics/youarethereason.mp3"]; // Song file names in your playlist
+
+    // shuffle playlist
+    for (let i = playlist.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * i);
+      const temp = playlist[i];
+      playlist[i] = playlist[j];
+      playlist[j] = temp;
+    }
+    current_song_index = 0;
+
     var playStopBtn = document.getElementById("play-stop-btn");
     var isPlaying = false;
 
@@ -25,9 +36,10 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   
     function playSong() {
-      var randomIndex = Math.floor(Math.random() * playlist.length); // Get a random index from the playlist
-      var song = playlist[randomIndex]; // Get the random song from the playlist array
-  
+      console.log("Playing song ", current_song_index, ": ", playlist[current_song_index]);
+      var song = playlist[current_song_index]; // Get the current song based on the index
+      current_song_index = (current_song_index + 1) % playlist.length; // Increment the index
+
       audio.src = song; // Set the audio source to the selected song
       audio.load(); // Load the audio
   
