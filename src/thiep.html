@@ -4,9 +4,12 @@
     <title>Card Generator</title>
     <link rel="stylesheet" href="css/styles.min.css">
     <style>
+        html{
+            font-family: "Open Sans", sans-serif;  
+        }
         body {
             background-color: #f1f1f1;
-            font-family: Arial;
+            font-family: sans-serif;
             font-size: 40px;
         }
         canvas {
@@ -18,8 +21,11 @@
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
-            font-family: Arial;
+            font-family: sans-serif;
             font-size: 40px;
+        }
+        input[type=text]::placeholder {
+            font-family: 'Open Sans', sans-serif;
         }
         input[type=range] {
             width: 100%;
@@ -38,7 +44,7 @@
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
-            font-family: Arial;
+            font-family: sans-serif;
             font-size: 40px;
         }
         button {
@@ -46,13 +52,13 @@
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
-            font-family: Arial;
+            font-family: sans-serif;
             font-size: 40px;
         }
     </style>
 </head>
 <body>
-    <input type="text" id="imageText" placeholder="Enter your text" /><br>
+    <input type="text" id="imageText" placeholder="Tên khách" /><br>
     <div>
         <label for="fontSize">Font Size:</label>
         <input type="range" id="fontSize" name="fontSize" min="50" max="150">
