@@ -44,7 +44,7 @@
             padding: 12px 20px;
             margin: 8px 0;
             box-sizing: border-box;
-            font-family: sans-serif;
+            font-family: Arial;
             font-size: 40px;
         }
         button {
@@ -58,10 +58,12 @@
     </style>
 </head>
 <body>
-    <input type="text" id="imageText" placeholder="Tên khách" /><br>
+    <canvas id='canvas'></canvas>
+    <br/>
+    <input type="text" id="imageText" placeholder="Tên khách"/><br>
     <div>
         <label for="fontSize">Font Size:</label>
-        <input type="range" id="fontSize" name="fontSize" min="50" max="150">
+        <input type="range" id="fontSize" name="fontSize" min="10" max="80">
       </div>
       <div>
         <label for="fontColor">Font Color:</label>
@@ -83,7 +85,7 @@
       </div>
     <button id="download">Download</button>
     <br/>
-    <canvas id='canvas'></canvas>
+    
 </body>
 <script>
     window.onload = function() {
@@ -92,9 +94,9 @@
         let userText = 'Sample Text'
         ctx.font = "100px UVNkechuyen3";
         let img = new Image();
-        img.src = 'img/Thiep1.png'; 
-        let textX = 950;
-        let textY = 400;
+        img.src = 'img/ThiepTanHon.png'; 
+        let textX = 390;
+        let textY = 1907;
         // Get the device screen width
         let windowWidth = window.innerWidth;
         
@@ -102,8 +104,8 @@
         //let scale = windowWidth / img.width;
         let scale = 1;
         // Default font properties
-        let fontColor = '#000000';
-        let fontSize = 100;
+        let fontColor = '#aa4428';
+        let fontSize = 50;
         let fontStyle = 'normal';
         let fontWeight = 'normal';
 
@@ -118,7 +120,8 @@
 
         document.getElementById('imageText').addEventListener('input', function() {
             userText= this.value;
-            ctx.font = "100px UVNkechuyen3";
+            ctx.font = "50px UVNkechuyen3";
+            ctx.fillStyle = fontColor;
             ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before redrawing
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height); // Redraw the image
             ctx.fillText(userText, textX, textY); // Add the user text
