@@ -40,6 +40,8 @@ gulp.task('copy', function (done) {
         .pipe(gulp.dest('./src/img/album'));
     gulp.src('./fonts/*')
         .pipe(gulp.dest('./src/fonts'));
+    gulp.src('./fonts/UVN-font/*')
+        .pipe(gulp.dest('./src/fonts/UVN-font'));
     gulp.src('./js/vendor/*')
         .pipe(gulp.dest('./src/js/vendor'));
     gulp.src('./browserconfig.xml')

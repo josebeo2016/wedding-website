@@ -61,28 +61,39 @@
     <canvas id='canvas'></canvas>
     <br/>
     <input type="text" id="imageText" placeholder="Tên khách"/><br>
-    <div>
-        <label for="fontSize">Font Size:</label>
-        <input type="range" id="fontSize" name="fontSize" min="10" max="80">
-      </div>
-      <div>
-        <label for="fontColor">Font Color:</label>
-        <input type="color" id="fontColor" name="fontColor">
-      </div>
-      <div>
-        <label for="fontStyle">Font Style:</label>
-        <select id="fontStyle" name="fontStyle">
-          <option value="normal">Normal</option>
-          <option value="italic">Italic</option>
-        </select>
-      </div>
-      <div>
-        <label for="fontWeight">Font Weight:</label>
-        <select id="fontWeight" name="fontWeight">
-          <option value="normal">Normal</option>
-          <option value="bold">Bold</option>
-        </select>
-      </div>
+        <div>
+            <label for="font-family">Font Family:</label>
+            <select id="font-family">
+                <option value="UVNkechuyen">UVNkechuyen</option>
+                <option value="UVNbenxuan">UVNbenxuan</option>
+                <option value="UVNbucthu">UVNbucthu</option>
+                <option value="UVNmautim">UVNmautim</option>
+                <option value="UVNthutu">UVNthutu</option>
+                <option value="UVNvivi">UVNvivi</option>
+            </select>
+        </div>
+        <div>
+            <label for="fontSize">Font Size:</label>
+            <input type="range" id="fontSize" name="fontSize" min="10" max="80" value=50>
+        </div>
+        <div>
+            <label for="fontColor">Font Color:</label>
+            <input type="color" id="fontColor" name="fontColor">
+        </div>
+        <div>
+            <label for="fontStyle">Font Style:</label>
+            <select id="fontStyle" name="fontStyle">
+            <option value="normal">Normal</option>
+            <option value="italic">Italic</option>
+            </select>
+        </div>
+        <div>
+            <label for="fontWeight">Font Weight:</label>
+            <select id="fontWeight" name="fontWeight">
+            <option value="normal">Normal</option>
+            <option value="bold">Bold</option>
+            </select>
+        </div>
     <button id="download">Download</button>
     <br/>
     
@@ -92,11 +103,10 @@
         let canvas = document.getElementById('canvas');
         let ctx = canvas.getContext('2d');
         let userText = 'Sample Text'
-        ctx.font = "100px UVNkechuyen3";
         let img = new Image();
         img.src = 'img/ThiepVuQuy.png'; 
         let textX = 390;
-        let textY = 1940;
+        let textY = 2545;
         // Get the device screen width
         let windowWidth = window.innerWidth;
         
@@ -106,6 +116,7 @@
         // Default font properties
         let fontColor = '#aa4428';
         let fontSize = 50;
+        let fontFamily = 'UVNkechuyen';
         let fontStyle = 'normal';
         let fontWeight = 'normal';
 
@@ -120,7 +131,9 @@
 
         document.getElementById('imageText').addEventListener('input', function() {
             userText= this.value;
-            ctx.font = "50px UVNkechuyen3";
+            // changing the font property
+            ctx.font = `${fontStyle} ${fontWeight} ${fontSize}px ${fontFamily}`;
+            // changing the color
             ctx.fillStyle = fontColor;
             ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear canvas before redrawing
             ctx.drawImage(img, 0, 0, canvas.width, canvas.height); // Redraw the image
@@ -128,7 +141,6 @@
         });
         
         // Adjust the set canvas size according to the size of your predefined image.
-
         document.getElementById('fontColor').addEventListener('input', function() {
             fontColor = this.value;
             redrawText();
@@ -148,19 +160,19 @@
             fontWeight = this.value;
             redrawText();
         });
-
+        document.getElementById('font-family').addEventListener('change', function() {
+            fontFamily = this.value;
+            redrawText();
+        });
         function redrawText() {
             // clearing previous image
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-            // drawing fresh
-            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             // changing the font property
-            ctx.font = `${fontStyle} ${fontWeight} ${fontSize}px UVNkechuyen3`;
-
+            ctx.font = `${fontStyle} ${fontWeight} ${fontSize}px ${fontFamily}`;
             // changing the color
             ctx.fillStyle = fontColor;
-
+            // drawing fresh
+            ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
             // drawing text
             ctx.fillText(userText, textX, textY);
         }

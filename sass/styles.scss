@@ -31,9 +31,29 @@ Coronet font
 UVN font
 ========================================================================== */
 @font-face {
-  font-family: 'UVNkechuyen3';
-  src: url('../fonts/UVNKeChuyen3.TTF') format('truetype');
+  font-family: 'UVNkechuyen';
+  src: url('../fonts/UVN-font/UVNKeChuyen3.TTF') format('truetype');
   /* additional font properties */
+}
+@font-face {
+  font-family: 'UVNbenxuan';
+  src: url('../fonts/UVN-font/UVNBenXuan_B.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'UVNbucthu';
+  src: url('../fonts/UVN-font/UVNBucThu.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'UVNmautim';
+  src: url('../fonts/UVN-font/UVNMauTim2.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'UVNthutu';
+  src: url('../fonts/UVN-font/UVNThuTu.TTF') format('truetype');
+}
+@font-face {
+  font-family: 'UVNvivi';
+  src: url('../fonts/UVN-font/UVNViVi.TTF') format('truetype');
 }
 
 /* ==========================================================================
