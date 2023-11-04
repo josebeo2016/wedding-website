@@ -217,7 +217,7 @@ $(document).ready(function () {
       // If the countdown is finished, display a message
       if (distance < 0) {
         clearInterval(countdown);
-        $("#countdown").html("Countdown has ended!");
+        $("#countdown").html("Just Married!");
       }
     }, 1000);
     /********************** Add to Calendar **********************/
