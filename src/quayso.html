@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Number Generator</title>
+  <style>
+    html {
+      height: 100%;
+      background: radial-gradient(circle, #fff 20%, #ccc);
+      background-size: cover;
+    }
+    #container {
+      text-align: center;
+    }
+    .options {
+      background-color: #555;
+      border-radius: 5px;
+      color: #efefef;
+      padding: 10px 20px;
+      position: absolute;
+      cursor: pointer;
+    }
+    
+    .options input,
+    .options label {
+      display: none;
+    }
+    
+    .options:hover input,
+    .options:hover label {
+      display: inline;
+    }
+    
+    .options input {
+      background-color: #efefef;
+      padding: 10px;
+      margin: 5px 15px;
+    }
+    
+    
+    input[type="number"] {
+      width: 50px;
+    }
+
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 30px;
+      font-weight: bold;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    
+    button:hover {
+      background-color: #45a049;
+    }
+    
+    button:active {
+      background-color: #3e8e41;
+    }
+    
+    #container p {
+      margin-right: 5px; /* Add this line */
+    }
+    
+    .containerA {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    h1#result {
+      font-size: 20vw;
+      font-weight: bold;
+      /* Other styles for the result number */
+    }
+    
+    
+  </style>
+</head>
+<body>
+  <div id="container">
+    <form class="options"> 
+      <legend>Options</legend>
+      
+      <label for="min">Min</label>
+      <input type="number" value="0" id="minNumber" name="min">
+      
+      <label for="max">Max</label>
+      <input type="number" value="400" id="maxNumber" name="max">
+    </form>
+    <div class="containerA">
+      <h1 id="result">000</h1>
+      <button id="actionBtn" onclick="toggleGeneration()">Generate</button>
+    </div>
+    
+    <!-- <p>Min Number:</p><input type="number" id="minNumber" value="0">
+    <p>Max Number:</p><input type="number" id="maxNumber" value="400"> -->
+    <br><br>
+    
+  </div>
+
+  <script>
+    let intervalId;
+    let generating = false;
+
+    function toggleGeneration() {
+      if (!generating) {
+        const min = parseInt(document.getElementById("minNumber").value);
+        const max = parseInt(document.getElementById("maxNumber").value);
+
+        intervalId = setInterval(() => {
+          const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
+          const formattedNumber = randomNumber.toString().padStart(3, '0');
+          document.getElementById("result").textContent = formattedNumber;
+        }, 10);
+
+        document.getElementById("actionBtn").textContent = "Stop";
+        generating = true;
+      } else {
+        clearInterval(intervalId);
+        document.getElementById("actionBtn").textContent = "Generate";
+        generating = false;
+      }
+    }
+  </script>
+</body>
+</html>

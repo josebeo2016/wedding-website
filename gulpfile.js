@@ -34,6 +34,8 @@ gulp.task('copy', function (done) {
         .pipe(gulp.dest('./src'));
     gulp.src('./thiep-vuquy.html')
         .pipe(gulp.dest('./src'));
+    gulp.src('./quayso.html')
+        .pipe(gulp.dest('./src'));
     gulp.src('./img/*')
         .pipe(gulp.dest('./src/img'));
     gulp.src('./img/album/*')
