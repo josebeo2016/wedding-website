@@ -166,16 +166,25 @@ $(document).ready(function () {
 
 
     /********************** Toggle Map Content **********************/
+    $('#btn-show-map-tl').click(function () {
+        $('#map-content').toggleClass('toggle-map-content');
+        $('#btn-show-content').toggleClass('toggle-map-content');
+        $('#map-canvas-vq').hide();
+        $('#map-canvas-th').hide();
+        $('#map-canvas-tl').show();
+    });
     $('#btn-show-map-th').click(function () {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
         $('#map-canvas-vq').hide();
+        $('#map-canvas-tl').hide();
         $('#map-canvas-th').show();
     });
     $('#btn-show-map-vq').click(function () {
         $('#map-content').toggleClass('toggle-map-content');
         $('#btn-show-content').toggleClass('toggle-map-content');
         $('#map-canvas-th').hide();
+        $('#map-canvas-tl').hide();
         $('#map-canvas-vq').show();
     });
     $('#btn-show-content').click(function () {
@@ -185,14 +194,14 @@ $(document).ready(function () {
 
     /********************** copy button **********************/
     $('#btn-copy-stk').click(function() {
-        var textToCopy = '4441123456';
+        var textToCopy = '19035614109016';
         navigator.clipboard.writeText(textToCopy);
         $('#noti-stk-wrapper').html(alert_markup('info', '<strong>Số tài khoảng đã được lưu vào clipboard!</strong>'));
 
     });
     /********************** Countdown **********************/
     // Set the date/time for the countdown
-    var countDownDate = new Date("2023-11-11T03:59:59").getTime();
+    var countDownDate = new Date("2024-04-30T04:29:59").getTime();
 
     // Update the countdown every second
     var countdown = setInterval(function() {
@@ -229,23 +238,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Tiệc cưới Thiên Phúc & Hoàng Mi",
+            title: "Huy Hoàng & Ngọc Hân Wedding",
 
             // Event start date
-            start: new Date('Nov 11, 2023 11:00'),
+            start: new Date('Apr 30, 2024 04:30'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('Nov 12, 2023 13:00'),
+            end: new Date('May 1, 2024 14:30'),
 
             // Event Address
-            address: 'Trảng bom, Đồng Nai',
+            address: 'Đồng Nai',
 
             // Event Description
-            description: "Tiệc cưới Thiên Phúc & Hoàng Mi",
+            description: "Huy Hoàng & Ngọc Hân Wedding",
         }
     });
 
@@ -265,15 +274,17 @@ $(document).ready(function () {
     $('#rsvp-form').on('submit', function (e) {
         e.preventDefault();
         var data = $(this).serialize();
+        console.log(data);
         
         $('#alert-wrapper').html(alert_markup('info', '<strong>Vui lòng đợi!</strong> Chúng tôi đang lưu lời chúc của bạn.'));
-        $.post('https://script.google.com/macros/s/AKfycbzKuiPlZg5XuamezP_PzavWiALs-iv669sd7_WW3Gbpc6AlJ2fNBKTrEXZwzt_d144O/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycbxD828HhaMVp1ag3hxwCAhBokkfu-4JDmJer5k_SRJbvciXEw0fghN08DP3cHmpHpbn/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
                     $('#alert-wrapper').html(alert_markup('danger', data.message));
                 } else {
                     $('textarea[name="message"]').val('');
+                    $('input[name="name"]').val('');
                     $('#alert-wrapper').html('');
                     $('#rsvp-modal').modal('show');
                 }
