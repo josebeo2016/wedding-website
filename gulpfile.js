@@ -30,10 +30,10 @@ gulp.task('minify-js', function () {
 gulp.task('copy', function (done) {
     gulp.src('./index.html')
         .pipe(gulp.dest('./src'));
-    gulp.src('./thiep.html')
-        .pipe(gulp.dest('./src'));
-    gulp.src('./thiep-vuquy.html')
-        .pipe(gulp.dest('./src'));
+    // gulp.src('./thiep.html')
+    //     .pipe(gulp.dest('./src'));
+    // gulp.src('./thiep-vuquy.html')
+    //     .pipe(gulp.dest('./src'));
     gulp.src('./img/*')
         .pipe(gulp.dest('./src/img'));
     gulp.src('./img/album/*')
