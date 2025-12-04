@@ -1,0 +1,10 @@
+# httpd application with a mounted volume for website content
+version: '3.8'
+services:
+  web:
+    image: httpd:latest
+    ports:
+      - "9876:80"
+    volumes:
+      - ./src:/usr/local/apache2/htdocs/
+    restart: always
