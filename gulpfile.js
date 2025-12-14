@@ -28,35 +28,35 @@ gulp.task('minify-js', function () {
 
 // copy index and images to src
 gulp.task('copy', function (done) {
-    gulp.src('./index.html')
+    gulp.src('./index.html', {encoding: false})
         .pipe(gulp.dest('./src'));
     // gulp.src('./thiep.html')
     //     .pipe(gulp.dest('./src'));
     // gulp.src('./thiep-vuquy.html')
     //     .pipe(gulp.dest('./src'));
-    gulp.src('./img/*')
+    gulp.src('./img/*', {encoding: false})
         .pipe(gulp.dest('./src/img'));
-    gulp.src('./img/album/*')
+    gulp.src('./img/album/*', {encoding: false})
         .pipe(gulp.dest('./src/img/album'));
-    gulp.src('./fonts/*')
+    gulp.src('./fonts/*', {encoding: false})
         .pipe(gulp.dest('./src/fonts'));
-    gulp.src('./fonts/UVN-font/*')
+    gulp.src('./fonts/UVN-font/*', {encoding: false})
         .pipe(gulp.dest('./src/fonts/UVN-font'));
-    gulp.src('./js/vendor/*')
+    gulp.src('./js/vendor/*', {encoding: false})
         .pipe(gulp.dest('./src/js/vendor'));
-    gulp.src('./browserconfig.xml')
+    gulp.src('./browserconfig.xml', {encoding: false})
         .pipe(gulp.dest('./src'));
-    gulp.src('./favicon.ico')
+    gulp.src('./favicon.ico', {encoding: false})
         .pipe(gulp.dest('./src'));
-    gulp.src('./*.png')
+    gulp.src('./*.png', {encoding: false})
         .pipe(gulp.dest('./src'));
-    gulp.src('./manifest.json')
+    gulp.src('./manifest.json', {encoding: false})
         .pipe(gulp.dest('./src'));
-    gulp.src('./js/*')
+    gulp.src('./js/*', {encoding: false})
         .pipe(gulp.dest('./src/js'));
-    gulp.src('./css/*')
+    gulp.src('./css/*', {encoding: false})
         .pipe(gulp.dest('./src/css'));
-    gulp.src('./musics/*')
+    gulp.src('./musics/*', {encoding: false})
         .pipe(gulp.dest('./src/musics'));
     done();
 });

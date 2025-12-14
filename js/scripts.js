@@ -194,14 +194,14 @@ $(document).ready(function () {
 
     /********************** copy button **********************/
     $('#btn-copy-stk').click(function() {
-        var textToCopy = '19035614109016';
+        var textToCopy = '8874004137';
         navigator.clipboard.writeText(textToCopy);
         $('#noti-stk-wrapper').html(alert_markup('info', '<strong>Số tài khoảng đã được lưu vào clipboard!</strong>'));
 
     });
     /********************** Countdown **********************/
     // Set the date/time for the countdown
-    var countDownDate = new Date("2024-04-30T04:29:59").getTime();
+    var countDownDate = new Date("2026-01-17T04:29:59").getTime();
 
     // Update the countdown every second
     var countdown = setInterval(function() {
@@ -238,23 +238,23 @@ $(document).ready(function () {
         },
         data: {
             // Event title
-            title: "Huy Hoàng & Ngọc Hân Wedding",
+            title: "Nhật Trường & Như Thủy Wedding",
 
             // Event start date
-            start: new Date('Apr 30, 2024 04:30'),
+            start: new Date('Jan 17, 2026 04:30'),
 
             // Event duration (IN MINUTES)
             // duration: 120,
 
             // You can also choose to set an end time
             // If an end time is set, this will take precedence over duration
-            end: new Date('May 1, 2024 14:30'),
+            end: new Date('Jan 18, 2026 14:30'),
 
             // Event Address
-            address: 'Đồng Nai',
+            address: 'Thành Phố Hồ Chí Minh',
 
             // Event Description
-            description: "Huy Hoàng & Ngọc Hân Wedding",
+            description: "Nhật Trường & Như Thủy Wedding",
         }
     });
 
@@ -277,7 +277,7 @@ $(document).ready(function () {
         console.log(data);
         
         $('#alert-wrapper').html(alert_markup('info', '<strong>Vui lòng đợi!</strong> Chúng tôi đang lưu lời chúc của bạn.'));
-        $.post('https://script.google.com/macros/s/AKfycbxD828HhaMVp1ag3hxwCAhBokkfu-4JDmJer5k_SRJbvciXEw0fghN08DP3cHmpHpbn/exec', data)
+        $.post('https://script.google.com/macros/s/AKfycby9dGqmVpUSeoIfy_tONkJlLDMsg5ZvplJzwwr3fqtxN8FdA4bry1yFZjhfBbCHgkSFag/exec', data)
             .done(function (data) {
                 console.log(data);
                 if (data.result === "error") {
